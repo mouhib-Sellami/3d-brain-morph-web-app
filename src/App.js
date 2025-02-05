@@ -9,8 +9,11 @@ import { Mesh, Box3, Vector3 } from "three";
 import "./App.css";
 import React, { Suspense, useRef, useEffect, useState } from 'react';
 import { useFrame } from '@react-three/fiber';
+import { Pipeline } from "@zappar/zappar";
 
+Pipeline.licenseKey = "x6520.zappar.io";
 const LoadModal = (props) => {
+
   const { scene: originalScene } = useGLTF(props.model_path);
   const modelRef = useRef();
 
